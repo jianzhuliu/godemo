@@ -21,12 +21,16 @@ C:\Users\Administrator\.ssh
 >- 打开 id_rsa.pub 到gitee 或者github 添加公钥即可
 
 # 相关命令
-> git init
-> git add *
-> git commit -m "description"
+>- git init
 
-> git remote add gitee git@gitee.com:jianzhuliu/godemo.git
-> git remote add github git@github.com:jianzhuliu/godemo.git
+>- git add *
 
-> git push gitee master
-> git push github master
+>- git commit -m "description"
+
+>- git remote add gitee git@gitee.com:jianzhuliu/godemo.git
+
+>- git remote add github git@github.com:jianzhuliu/godemo.git
+
+>- git push gitee master
+
+>- git push github master
