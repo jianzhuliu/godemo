@@ -1,6 +1,6 @@
 # 项目位置
-https://gitee.com/jianzhuliu
-https://github.com/jianzhuliu
+>- https://gitee.com/jianzhuliu
+>- https://github.com/jianzhuliu
 
 # 下载 git 
 https://git-scm.com/
@@ -20,13 +20,13 @@ C:\Users\Administrator\.ssh
 
 >- 打开 id_rsa.pub 到gitee 或者github 添加公钥即可
 
->- 相关命令
-git init
-git add *
-git commit -m "description"
+# 相关命令
+> git init
+> git add *
+> git commit -m "description"
 
-git remote add gitee git@gitee.com:jianzhuliu/godemo.git
-git remote add github git@github.com:jianzhuliu/godemo.git
+> git remote add gitee git@gitee.com:jianzhuliu/godemo.git
+> git remote add github git@github.com:jianzhuliu/godemo.git
 
-git push gitee master
-git push github master
+> git push gitee master
+> git push github master
