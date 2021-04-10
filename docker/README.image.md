@@ -58,6 +58,7 @@ mkdir -p /tmp/mynginx && cd /tmp/mynginx
 cat >Dockerfile<<-EOF
 FROM centos:7
 COPY nginx.repo /etc/yum.repos.d/nginx.repo
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN yum install -y nginx
 EXPOSE 80
 ENV HOST=mynginx
