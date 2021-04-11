@@ -40,7 +40,7 @@ google/cadvisor:latest
 
 ## 容器与虚拟机
 >- 虚拟机是通过管理系统(Hypervisor)模拟出CPU、内存、网络等资源，创建客户内核和操作系统
->- 虚拟机有自己的内核和操作系统，不会直接使用到主机的操作系统和硬件资源，隔离性鸡安全性有更好的保障
+>- 虚拟机有自己的内核和操作系统，不会直接使用到主机的操作系统和硬件资源，隔离性及安全性有更好的保障
 
 >- Docker容器是通过Linux内核的Namespace技术实现文件系统、进程、设备及网络的隔离
 >- 通过Cgroups对CPU、内存等资源进行限制。隔离性靠内核提供
@@ -63,3 +63,12 @@ google/cadvisor:latest
 
 ## Cgroups -- control groups
 [Cgroups](./README.cgroups.md)
+
+## Docker 组件
+[Component](./README.component.md)
+
+## Network 网络模式
+[Network](./README.network.md)
+
+## Volume 数据卷
+[Volume](./README.volume.md)
