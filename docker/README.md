@@ -15,7 +15,7 @@ https://labs.play-with-docker.com/
 [container](./README.container.md)
 
 ## 仓库
-[container](./README.repository.md)
+[repository](./README.repository.md)
 
 ## 对比
 > 镜像包含了容器运行所需要的文件系统结构和内容，是静态的只读文件，
@@ -78,3 +78,6 @@ google/cadvisor:latest
 
 ## Kubernetes
 [Kubernetes](./README.kubernetes.md)
+
+## 镜像构建
+[Dockerfile](./README.dockerfile.md)
