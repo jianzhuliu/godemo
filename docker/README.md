@@ -75,3 +75,6 @@ google/cadvisor:latest
 
 ## Docker compose
 [docker-compose](./README.docker-compose.md)
+
+## Kubernetes
+[Kubernetes](./README.kubernetes.md)
