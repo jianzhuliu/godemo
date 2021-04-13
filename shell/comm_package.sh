@@ -15,6 +15,7 @@ yum -y install tree
 
 ## tcp协议日志监听，三次握手，四次分手日志记录可见
 yum -y install tcpdump
+## tcpdump -nn -i eth0 port 80
 
 ## 网络文件下载
 yum -y install wget

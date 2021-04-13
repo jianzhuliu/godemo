@@ -75,12 +75,11 @@ echo building server:latest
 docker build -t server:latest .
 
 ## 删除本地二进制文件
+rm server
 
 ## 测试运行镜像 
 ##docker run --rm --name=server -p 8083:8003 server:latest
 
-
-rm server
 ```
 
 >- 查看镜像  docker image ls server
@@ -89,7 +88,7 @@ rm server
 >- 删除镜像 docker image rm server:latest
 
 ## 多阶段构建
->- 一个 Dockerfile 即可，不需要额外辅助脚本，镜像内支持使用多个 FROM,已最后一个 FROM 最为镜像的生成
+>- 一个 Dockerfile 即可，不需要额外辅助脚本，镜像内支持使用多个 FROM,以最后一个 FROM 作为镜像的生成
 >- 构建阶段支持命名 AS，如果不命名，默认第一个阶段序号为 0
 >- Dockerfile
 ```
