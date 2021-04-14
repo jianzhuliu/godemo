@@ -86,26 +86,8 @@ google/cadvisor:latest
 [DevOps](./README.devops.md)
 
 ## 配置国内镜像
->- https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
->- /etc/docker/daemon.conf
-```
-cat <<EOF >/etc/docker/daemon.conf
-{
-  "containerd": "/run/containerd/containerd.sock",
-  "registry-mirrors": [
-    "https://docker.mirrors.ustc.edu.cn",
-	"https://docker.mirrors.ustc.edu.cn",
-    "https://registry.docker-cn.com",
-    "http://hub-mirror.c.163.com"
-  ]
-}
-EOF
+[httphttps-proxy](./README.proxy.md)
 
-```
-
->- systemctl daemon-reload
->- systemctl restart docker
->- docker info
 
 ##辅助脚本
 >- 删除为 none 的镜像
