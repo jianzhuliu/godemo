@@ -25,3 +25,6 @@ yum -y install make
 
 ## lsof 展示被进程打开的文件信息
 yum -y install lsof
+
+## 格式转换
+yum -y install dos2unix
