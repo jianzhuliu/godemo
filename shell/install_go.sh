@@ -10,7 +10,6 @@ GOROOT_PATH=/usr/local
 GOPATH=/go
 GOPROXY='https://goproxy.cn,direct'
 PROFILE=/etc/profile
-MINSIZE=1048
 
 #默认参数判断
 if [ "$VERSION" == "" ];then
@@ -52,7 +51,7 @@ fi
 
 ## 文件大小判断
 FILE_SIZE=`wc -c <${TMP_FILE}`
-if [ ${FILE_SIZE} -lt $MINSIZ ]; then
+if [ ${FILE_SIZE} -lt 1048 ]; then
 	echo "${TMP_FILE} size is too small"
 	exit
 fi
@@ -67,7 +66,7 @@ cat <<EOF >>${PROFILE}
 #########go  `date +"%F %T"`
 export GOROOT=${GOROOT_PATH}/${SIGN}
 export GOPATH=${GOPATH}
-export GO111MODULE=auto
+export GO111MODULE=on
 export GOPROXY='${GOPROXY}'
 export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin
 #########go end
