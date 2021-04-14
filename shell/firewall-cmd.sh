@@ -22,11 +22,8 @@ firewall-cmd --list-ports
 firewall-cmd --state
 
 ## 添加访问端口
-firewall-cmd --zone=public --add-port=8004/tcp --permanent
-firewall-cmd --zone=public --add-port=8003/tcp --permanent
-firewall-cmd --zone=public --add-port=8002/tcp --permanent
-firewall-cmd --zone=public --add-port=8001/tcp --permanent
 firewall-cmd --zone=public --add-port=8000/tcp --permanent
+firewall-cmd --zone=public --add-port=8001-8004/tcp --permanent
 
 ## 更新防火墙 
 firewall-cmd --reload
