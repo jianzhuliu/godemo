@@ -32,20 +32,22 @@ protoc --version
 wget https://github.com/grpc/grpc-go/archive/refs/tags/v1.37.0.tar.gz
 tar -zxf v1.37.0.tar.gz
 ls -l grpc-go-1.37.0/examples/helloworld/
-
-```
-
-## helloworld
-```
-cd helloworld
+cd grpc-go-1.37.0/examples/helloworld/
 protoc --go_out=. --go_opt=paths=source_relative \
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 	helloworld/helloworld.proto
-
-
 ``` 
 
 >- go run greeter_server/main.go
 >- go run greeter_client/main.go jianzhu
 
+## 目录结构
+>- helloworld 	-- 简单实例
+>- proto 	-- .proto 文件列表
+
+## helloworld 实例
+>- make helloworld
+>- cd helloworld
+>- go run greeter_server/main.go
+>- go run greeter_client/main.go jianzhu
 
