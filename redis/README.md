@@ -2,6 +2,7 @@
 >- https://redis.io/
 >- http://redis.cn/
 >- https://hub.docker.com/_/redis/
+>- https://github.com/gomodule/redigo
 
 ## install
 ```
