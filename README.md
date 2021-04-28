@@ -9,6 +9,7 @@ go语言编程学习demo
 >- [kubernetes](./kubernetes/README.md)
 >- [grpc](./grpc/README.md)
 >- [redis](./redis/README.md)
+>- [nginx](./nginx/README.md)
 
 #### go 
 >- [go](./go/README.md)
