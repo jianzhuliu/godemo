@@ -13,7 +13,7 @@ yum install -y gcc
 make USE_SYSTEMD=yes
 make PREFIX=/app/redis6 install
 
-cat >>/etc/profile<EOF
+cat >>/etc/profile<<EOF
 REDIS_HOME=/app/redis6
 PATH=\$PATH:\$REDIS_HOME/bin
 EOF
