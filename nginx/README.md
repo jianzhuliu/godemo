@@ -17,8 +17,13 @@ EOF
 
 yum install -y nginx
 
-nginx -v
 ```
+
+>- 查看版本 nginx -v
+>- 查看安装信息  rpm -ql nginx
+>- 主配置文件 /etc/nginx/nginx.conf 
+>- 静态资源目录 /usr/share/nginx/html/
+
 
 ## 源码安装
 >- 编译环境  yum install -y gcc 
@@ -38,8 +43,12 @@ make install
 
 ## 命令
 >- 启动 nginx 
->- 停止 nginx -s stop|quit
->- 重新加载 nginx -s reload  
+>- 重启 nginx -s reopen
+>- 快速停止 nginx -s stop
+>- 等待工作进程处理完毕后关闭 nginx -s quit
+>- 重新加载配置文件 nginx -s reload 
+>- 查看最终配置 nginx -T
+>- 检查配置文件，不运行 nginx -t  
 
 ## Docker 启动
 >- docker pull nginx:1.20.0
@@ -59,3 +68,6 @@ EOF
 
 >- 启动 docker-compose up
 >- 停止 docker-compose down
+
+## nginx.conf
+>- [nginx.conf](./README.nginx.conf.md)
