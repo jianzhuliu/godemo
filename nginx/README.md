@@ -103,3 +103,6 @@ location /bbs/{
 
 ## 配置负载均衡
 >- [balance](./README.balance.md)
+
+## 配置代理缓存
+>- [cache](./README.cache.md)
