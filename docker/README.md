@@ -111,3 +111,6 @@ docker rmi $(docker images -q)
 ```
 docker rm $(docker ps -a -q)
 ```
+
+## 遇到的错误汇总
+>- [error](./README.error.md)
