@@ -109,3 +109,20 @@ location /bbs/{
 
 ## demo实例
 >- [demo](./demo/README.md)
+
+## https 
+>- [https](./README.https.md)
+
+## 进程结构
+>- 一个 mater 进程，多个 child 进程结构
+>- master 管理 child ，本身不处理用户请求
+>- child 通过共享内存的方式进行通信
+
+## 配置文件重载 nginx -s reload
+>- 向 master 发送 HUP 信号
+>- master 检查语法配置
+>- master 打开监听端口
+>- master 使用新的配置文件，启动新的 child 
+>- master 向老的 worker 子进程发送 QUIT 信号
+>- 老的 worker 子进程关闭监听句柄，处理完当前连接后关闭进程
+>- 整个过程始终处于平稳运行中，实现了平滑升级，用户无感知
