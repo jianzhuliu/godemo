@@ -1,0 +1,33 @@
+### 基于docker配置nginx 负载均衡，反向代理，缓存demo
+### docker-compose up 
+### curl localhost:8080/
+### curl localhost:8080/balance/
+### curl -i localhost:8080/cache/ 
+version: "3.8"
+services:
+ server1:
+  image: nginx:1.20.0
+  volumes:
+   - ./conf/server.conf:/etc/nginx/conf.d/default.conf:ro
+   - ./html/server1:/usr/share/nginx/html
+ server2:
+  image: nginx:1.20.0
+  volumes:
+   - ./conf/server.conf:/etc/nginx/conf.d/default.conf:ro
+   - ./html/server2:/usr/share/nginx/html
+ server3:
+  image: nginx:1.20.0
+  volumes:
+   - ./conf/server.conf:/etc/nginx/conf.d/default.conf:ro
+   - ./html/server3:/usr/share/nginx/html
+ proxy1:
+  image: nginx:1.20.0
+  volumes:
+   - ./conf/proxy1.conf:/etc/nginx/conf.d/default.conf:ro
+   - ./html/proxy1:/usr/share/nginx/html
+  ports:
+   - 8080:80
+  depends_on:
+   - server1
+   - server2
+   - server3

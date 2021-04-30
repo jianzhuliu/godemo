@@ -106,3 +106,6 @@ location /bbs/{
 
 ## 配置代理缓存
 >- [cache](./README.cache.md)
+
+## demo实例
+>- [demo](./demo/README.md)
