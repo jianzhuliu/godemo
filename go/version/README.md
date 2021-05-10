@@ -1,4 +1,8 @@
 ## 版本控制
 
-## 程序平滑更新
->-make restart
+## 编译
+>-make 
+
+## 运行
+>-make version
+
