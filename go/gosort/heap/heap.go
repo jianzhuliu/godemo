@@ -15,13 +15,16 @@ type Heap struct {
 
 //创建一个堆对象
 func New(args ...int) *Heap {
-	heap := &Heap{data: make([]int, 1)}
+	var heap *Heap
 
 	//如果有参数，则依次加入堆中
 	if len(args) > 0 {
+		heap = &Heap{data: make([]int, 1, len(args)+1)}
 		for i := 0; i < len(args); i++ {
 			heap.Push(args[i])
 		}
+	} else {
+		heap = &Heap{data: make([]int, 1)}
 	}
 
 	return heap
@@ -99,6 +102,17 @@ func (h *Heap) heapify() {
 
 	}
 
+}
+
+//排序
+func (h *Heap) Sort() []int {
+	size := h.Size()
+	res := make([]int, size)
+	for i := 1; i <= size; i++ {
+		res[size-i] = h.Pop()
+	}
+
+	return res
 }
 
 //获取堆长度
