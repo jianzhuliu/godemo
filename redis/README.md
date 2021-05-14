@@ -64,3 +64,6 @@ docker exec -it redis6 redis-cli
 
 ## sorted_set
 >- [sorted_set](./README.sorted_set.md)
+
+## 哨兵 sentinel
+>- [sentinel](./README.sentinel.md)
