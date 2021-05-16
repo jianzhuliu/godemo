@@ -67,3 +67,6 @@ docker exec -it redis6 redis-cli
 
 ## 哨兵 sentinel
 >- [sentinel](./README.sentinel.md)
+
+## 集群 cluster 
+>- [cluster](./README.cluster.md)
