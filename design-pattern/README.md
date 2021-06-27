@@ -1,6 +1,6 @@
 ## 设计模式
-- (快来，这里有23种设计模式的Go语言实现（一）)[https://bbs.huaweicloud.com/blogs/279505]
-- (快来，这里有23种设计模式的Go语言实现（二）)[https://bbs.huaweicloud.com/blogs/280291]
+- [快来，这里有23种设计模式的Go语言实现（一）](https://bbs.huaweicloud.com/blogs/279505)
+- [快来，这里有23种设计模式的Go语言实现（二）](https://bbs.huaweicloud.com/blogs/280291)
 
 ## 创建型模式 (Creational Pattern)
 
@@ -28,21 +28,21 @@
 
 ## 结构型模式 (Structural Pattern)
 
-#### 组合模式 (Composite Pattern)
+#### 6、组合模式 (Composite Pattern)
 - 解决代码复用的问题，相比于继承关系，组合模式可以避免继承层次过深导致的代码复杂问题
 - ./msg/ msg.Message{}
 - ./pipeline pipeline.Pipeline{}
 - 一个Pipeline由Input、Filter、Output三类插件组成，形成了“部分-整体”的关系，而且它们都实现了Plugin接口
 - go test -v -run=TestPipeline ./pipeline
 
-#### 适配器 (Adapter Pattern)
+#### 7、适配器 (Adapter Pattern)
 - 看作是两个不兼容接口之间的桥梁，可以将一个接口转换成Client所希望的另外一个接口，解决了模块之间因为接口不兼容而无法一起工作的问题
 - ./msg/kafka
 - ./pipeline pipeline.KafkaInput{}
 - go test -v -run=TestKafkaInputPipeline ./pipeline
 
 
-#### 桥接模式 (Bridge Pattern)
+#### 8、桥接模式 (Bridge Pattern)
 - 将模块的抽象部分和实现部分进行分离，让它们能够往各自的方向扩展，从而达到解耦的目的
 - ./pipeline pipeline.Pipeline{}
 - go test -v -run=TestPipeline ./pipeline
