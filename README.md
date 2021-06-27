@@ -20,6 +20,8 @@ go语言编程学习demo
 #### shell 脚本
 >- [shell](./shell/README.md)
 
+#### 设计模式 (design-pattern)
+>- [design-pattern](./design-pattern/README.md)
 
 #### 其它
 >- [network](./network/README.md)

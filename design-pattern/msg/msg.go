@@ -71,6 +71,11 @@ func (b *builder) WithBodyItem(item string) *builder {
 	return b
 }
 
+func (b *builder) WithBodyItems(items []string) *builder {
+	b.msg.Body.Items = items
+	return b
+}
+
 func (b *builder) Builder() *Message {
 	return b.msg
 }

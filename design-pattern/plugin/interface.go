@@ -1,20 +1,27 @@
 package plugin
 
-type Plugin interface{}
+import "design-pattern/msg"
+
+type Plugin interface {
+	Start()
+	Stop()
+	Status() Status
+	Init()
+}
 
 type Input interface {
 	Plugin
-	Receive() string
+	Receive() *msg.Message
 }
 
 type Filter interface {
 	Plugin
-	Process(msg string) string
+	Process(msg *msg.Message) *msg.Message
 }
 
 type Output interface {
 	Plugin
-	Send(msg string)
+	Send(msg *msg.Message)
 }
 
 type Factory interface {

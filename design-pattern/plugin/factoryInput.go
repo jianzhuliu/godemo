@@ -12,5 +12,7 @@ type InputFactory struct{}
 
 func (f *InputFactory) Create(conf Config) Plugin {
 	t, _ := inputNames[conf.Name]
-	return reflect.New(t).Interface().(Plugin)
+	p := reflect.New(t).Interface().(Plugin)
+	p.Init()
+	return p
 }
